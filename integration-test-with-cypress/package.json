@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "test": "cypress open",
+    "test": "cypress open --e2e --browser=chrome",
     "test:core": "jest"
   },
   "keywords": [],
