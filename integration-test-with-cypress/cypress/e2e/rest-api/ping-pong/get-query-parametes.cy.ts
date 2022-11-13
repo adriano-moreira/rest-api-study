@@ -1,7 +1,6 @@
-describe('simple get', () => {
+describe('rest api queries', () => {
 
-    it('shoud ...', () => {
-        let qs = new URLSearchParams();
+    it('shoud pong query parameters', () => {
         cy.request({
             url: '/ping-pong?',
             qs: {
@@ -18,13 +17,11 @@ describe('simple get', () => {
         })
     })
 
-    it('shoud ... with array', () => {
-        let qs = new URLSearchParams();
+    it('shoud pong query parameters with array', () => {
         cy.request({
             url: '/ping-pong?a=1&a=2&b=left&b=right&c=c',
         }).then(resp => {
             expect(resp.status).be.eq(200);
-
             cy.log('body', resp.body)
             expect(resp.body.a[0]).be.eq('1');
             expect(resp.body.a[1]).be.eq('2');
