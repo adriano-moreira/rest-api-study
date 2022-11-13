@@ -1,8 +1,8 @@
-describe('rest api queries', () => {
+describe('rest api GET query', () => {
 
     it('shoud pong query parameters', () => {
         cy.request({
-            url: '/ping-pong?',
+            url: '/ping-pong',
             qs: {
                 name: "me",
                 one: 1,
